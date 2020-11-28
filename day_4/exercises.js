@@ -30,3 +30,72 @@ function myFunc(score) {
   }
 }
 // console.log(myFunc(67));
+
+// 2. Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
+// September, October or November, the season is Autumn.
+// December, January or February, the season is Winter.
+// March, April or May, the season is Spring
+// June, July or August, the season is Summer
+function myFunc2(month) {
+  if (["september", "october", "november"].includes(month.toLowerCase())) {
+    return "Autumn";
+  } else if (
+    ["december", "january", "february"].includes(month.toLowerCase())
+  ) {
+    return "Winter";
+  } else if (["march", "april", "may"].includes(month.toLowerCase())) {
+    return "Spring";
+  } else if (["june", "july", "august"].includes(month.toLowerCase())) {
+    return "Summer";
+  } else {
+    return "Your month is not correct";
+  }
+}
+// console.log(myFunc2("december"));
+
+// 3. Check if a day is weekend day or a working day. Your script will take day as an input.
+function myFunc3(value) {
+  if (
+    ["monday", "tuesday", "wednesday", "thursday", "friday"].includes(
+      value.toLowerCase()
+    )
+  ) {
+    return `${value[0].toUpperCase()}${value.slice(1)} is a working day!`;
+  } else if (["saturday", "sunday"].includes(value.toLowerCase())) {
+    return `${value[0].toUpperCase()}${value.slice(1)} is a weekend day!`;
+  } else {
+    return "Wrong day!";
+  }
+}
+// console.log(myFunc3("saturday"));
+
+/* LEVEL 3 */
+// 1. Write a program which tells the number of days in a month (considering also leap years)
+function myFunc4(month) {
+  if (
+    [
+      "january",
+      "march",
+      "may",
+      "july",
+      "august",
+      "october",
+      "december",
+    ].includes(month.toLowerCase())
+  ) {
+    return `${month[0].toUpperCase()}${month
+      .toLowerCase()
+      .slice(1)} has 31 days.`;
+  } else if (
+    ["april", "june", "september", "november"].includes(month.toLowerCase())
+  ) {
+    return `${month[0].toUpperCase()}${month
+      .toLowerCase()
+      .slice(1)} has 30 days.`;
+  } else if (month.toLowerCase() == "february") {
+    return "February has 28 days (29 in leap years).";
+  } else {
+    return "Your month name is incorrect";
+  }
+}
+// console.log(myFunc4("february"));
