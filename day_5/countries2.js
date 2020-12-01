@@ -192,36 +192,7 @@ const countries = [
   "Yemen",
   "Zambia",
   "Zimbabwe",
-  "Poland2"
+  "Poland2",
 ];
 
-// console.log(countries.slice(0, 10));
-// console.log(countries.length);
-
-// countries.length % 2 == 0
-//   ? console.log(
-//       countries[parseInt(countries.length / 2) - 1],
-//       countries[parseInt(countries.length / 2)]
-//     )
-//   : console.log(countries[parseInt(countries.length / 2)]);
-// console.log(countries.indexOf("Lesotho"));
-// console.log(countries.indexOf("Liberia"));
-
-var numbers = [1, 2, 3, 4, 5, 6, 7];
-
-function myFunc(array) {
-  let firstArray = [];
-  let secondArray = [];
-  if (array.length % 2 == 0) {
-    firstArray = array.slice(0, array.length / 2);
-    secondArray = array.slice(array.length / 2);
-  } else {
-    firstArray = array.slice(0, parseInt(array.length / 2) + 1);
-    secondArray = array.slice(parseInt(array.length / 2) + 1);
-  }
-
-  return [firstArray, secondArray];
-}
-
-console.log(myFunc(numbers));
-console.log(myFunc(countries));
+module.exports = { countries };

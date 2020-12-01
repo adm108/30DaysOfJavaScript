@@ -29,7 +29,6 @@ let year = 2020;
 // console.log(4 === 4);
 // console.log(4 !== "4");
 // console.log("string" === "string");
-
 // TRUE:
 // console.log(4 !== 4);
 // console.log(4 === "4");
@@ -47,7 +46,7 @@ let year = 2020;
 // console.log(4 != "4");
 // console.log(4 == "4");
 // console.log(4 === "4");
-// Find the length of python and jargon and make a falsy comparison statement.
+// 5.1 Find the length of python and jargon and make a falsy comparison statement.
 // console.log("python".length !== "jargon".length);
 
 // 6. Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
@@ -61,24 +60,24 @@ let year = 2020;
 // console.log(!(4 > 3 && 10 < 12));
 // console.log(!(4 > 3 && 10 > 12));
 // console.log(!(4 === "4"));
-// There is no 'on' in both dragon and python
+// 6.1 There is no 'on' in both dragon and python
 // console.log(!("dragon".includes("on") && "python".includes("on")));
 
 // 7. Use the Date object to do the following activities
 var myData = new Date();
-// What is the year today?
+// 7.1 What is the year today?
 // console.log(myData.getFullYear());
-// What is the month today as a number?
+// 7.2 What is the month today as a number?
 // console.log(myData.getMonth() + 1);
-// What is the date today?
+// 7.3 What is the date today?
 // console.log(myData.getDate());
-// What is the day today as a number?
+// 7.4 What is the day today as a number?
 // console.log(myData.getDay());
-// What is the hours now?
+// 7.5 What is the hours now?
 // console.log(myData.getHours());
-// What is the minutes now?
+// 7.6 What is the minutes now?
 // console.log(myData.getMinutes());
-// Find out the numbers of seconds elapsed from January 1, 1970 to now.
+// 7.7 Find out the numbers of seconds elapsed from January 1, 1970 to now.
 // console.log(myData.getTime());
 
 /* LEVEL 2 */
@@ -134,17 +133,17 @@ let yourAge = 25;
 const now = new Date();
 const year2 = now.getFullYear(); // return year
 const month = now.getMonth() + 1; // return month(0 - 11)
-const date = now.getDate(); // return date (1 - 31)
+const date = (now.getDate() < 10 ? "0" : "") + now.getDate(); // return date (1 - 31)
 const hours = (now.getHours() < 10 ? "0" : "") + now.getHours(); // return number (0 - 23)
 const minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes(); // return number (0 -59)
 const seconds = now.getSeconds();
-// YYYY-MM-DD HH:mm
-console.log(`${year2}-${month}-${date} ${hours}:${minutes}`);
-// DD-MM-YYYY HH:mm
-console.log(`${date}-${month}-${year} ${hours}:${minutes}`);
-// DD/MM/YYYY HH:mm
-console.log(`${date}/${month}/${year} ${hours}:${minutes}`);
+// 15.1 YYYY-MM-DD HH:mm
+// console.log(`${year2}-${month}-${date} ${hours}:${minutes}`);
+// 15.2 DD-MM-YYYY HH:mm
+// console.log(`${date}-${month}-${year} ${hours}:${minutes}`);
+// 15.3 DD/MM/YYYY HH:mm
+// console.log(`${date}/${month}/${year} ${hours}:${minutes}`);
 
-// 16. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
-// YYYY-MM-DD HH:mm eg. 20120-01-02 07:05
-console.log(`${year2}-${month}-${date} ${hours}:${minutes}`);
+// 16. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05)
+// 16.1 YYYY-MM-DD HH:mm eg. 2020-01-02 07:05
+// console.log(`${year2}-${month}-${date} ${hours}:${minutes}`);

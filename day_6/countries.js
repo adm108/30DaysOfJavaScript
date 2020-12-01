@@ -192,64 +192,7 @@ const countries = [
   "Vietnam",
   "Yemen",
   "Zambia",
-  "Zimbabwe"
+  "Zimbabwe",
 ];
 
-const webTechs = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Redux",
-  "Node",
-  "MongoDB"
-];
-
-const mernStack = ["MongoDB", "Express", "React", "Node"];
-
-// let sortedCountries = [];
-// for (const element of countries.sort()) {
-//   sortedCountries.push(element);
-// }
-// console.log(sortedCountries);
-
-// console.log(webTechs.sort());
-
-// let countriesWithLand = [];
-// for (const element of countries) {
-//   let re = /land/g;
-//   if (element.match(re)) {
-//     countriesWithLand.push(element);
-//   }
-// }
-// console.log(countriesWithLand);
-
-// let mostCharacters = "";
-// for (const element of countries) {
-//   if (element.length > mostCharacters.length) {
-//     mostCharacters = element;
-//   }
-// }
-// console.log(mostCharacters);
-
-// let fourCharacters = [];
-// for (const element of countries) {
-//   if (element.length == 4) {
-//     fourCharacters.push(element);
-//   }
-// }
-// console.log(fourCharacters);
-
-// let moreWords = [];
-// for (const element of countries) {
-//   if (element.split(" ").length > 1) {
-//     moreWords.push(element);
-//   }
-// }
-// console.log(moreWords);
-
-let newArray = [];
-for (let i = countries.length - 1; i >= 0; i--) {
-  newArray.push(countries[i].toUpperCase());
-}
-console.log(newArray);
+module.exports = { countries };

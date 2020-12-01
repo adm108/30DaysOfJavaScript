@@ -9,11 +9,7 @@ var countries = [
   "Hungary",
   "Ireland",
   "Japan",
-  "Kenya"
+  "Kenya",
 ];
 
 module.exports = { countries };
-
-countries.includes("Ethiopia")
-  ? console.log("ETHIOPIA")
-  : countries.push("Ethiopia");

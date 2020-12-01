@@ -182,7 +182,6 @@ function mostFrequentWord(array) {
   myDict2[maxElement] = maxCount;
   return myDict2;
 }
-
 // console.log(mostFrequentWord(myArray));
 
 // 4. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
@@ -201,5 +200,4 @@ function total(array) {
   }
   return sumOfNumbers;
 }
-
 // console.log(total(listOfNumbers));
