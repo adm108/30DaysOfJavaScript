@@ -1,23 +1,33 @@
-// const dog = {
-//   name: "Bona",
-//   legs: 4,
-//   color: "gold",
-//   age: 3,
-//   bark: function () {
-//     return "woof woof";
-//   },
-//   other: function () {
-//     let skills = this.color[2];
-//     return skills;
-//   },
-//   weigth: "50 kg",
-//   dogInfo: function () {
-//     return `This is a dog named ${this.name} with ${this.legs} legs.`;
-//   },
-// };
+/* LEVEL 1 */
+// 1. Create an empty object called dog
+const dog = {};
 
-// console.log(dog.dogInfo());
+// 2. Print the the dog object on the console
+// console.log(dog);
 
+// 3. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return woof woof
+// 4. Get name, legs, color, age and bark value from the dog object
+// 5. Set new properties the dog object: breed, getDogInfo
+const dog2 = {
+  name: "Bona",
+  legs: 4,
+  color: "gold",
+  age: 3,
+  bark: function () {
+    return "woof woof";
+  },
+  other: function () {
+    let skills = this.color[2];
+    return skills;
+  },
+  weigth: "50 kg",
+  dogInfo: function () {
+    return `This is a dog named ${this.name} with ${this.legs} legs.`;
+  },
+};
+// console.log(dog2.name, dog2.legs, dog2.color, dog2.age, dog2.bark());
+
+/* LEVEL 2 */
 const users = {
   Alex: {
     email: "alex@alex.com",
@@ -87,68 +97,72 @@ const users = {
   },
 };
 
-// function theLargestNumberOfSkills() {
-//   let user = null;
-//   let index = 0;
-//   let rightIndex = 0;
-//   for (let element of Object.values(users)) {
-//     if (user == null) {
-//       user = element;
-//       index += 1;
-//     } else if (element.skills.length > user.skills.length) {
-//       user = element;
-//       rightIndex = index;
-//       index += 1;
-//     } else {
-//       index += 1;
-//     }
-//   }
-//   return [Object.keys(users)[rightIndex], user];
-// }
+// 1. Find the person who has many skills in the users object.
+function theLargestNumberOfSkills() {
+  let user = null;
+  let index = 0;
+  let rightIndex = 0;
+  for (let element of Object.values(users)) {
+    if (user == null) {
+      user = element;
+      index += 1;
+    } else if (element.skills.length > user.skills.length) {
+      user = element;
+      rightIndex = index;
+      index += 1;
+    } else {
+      index += 1;
+    }
+  }
+  return [Object.keys(users)[rightIndex], user];
+}
 // console.log(theLargestNumberOfSkills());
 
-// function loggedInUsers() {
-//   let count = 0;
-//   for (const element of Object.values(users)) {
-//     if (element.isLoggedIn == true) {
-//       count += 1;
-//     }
-//   }
-//   return count;
-// }
-// console.log(loggedInUsers());
+// 2. Count logged in users,count users having greater than equal to 50 points from the following object.
+function loggedInUsers() {
+  let count = 0;
+  for (const element of Object.values(users)) {
+    if (element.isLoggedIn == true) {
+      count += 1;
+    }
+  }
+  return count;
+}
 
-// function userMoreThan50Points() {
-//   let count = 0;
-//   for (const element of Object.values(users)) {
-//     if (element.points >= 50) {
-//       count += 1;
-//     }
-//   }
-//   return count;
-// }
+function userMoreThan50Points() {
+  let count = 0;
+  for (const element of Object.values(users)) {
+    if (element.points >= 50) {
+      count += 1;
+    }
+  }
+  return count;
+}
+// console.log(loggedInUsers());
 // console.log(userMoreThan50Points());
 
-// function findMern() {
-//   let index = 0;
-//   let myArray = [];
-//   for (const element of Object.values(users)) {
-//     if (
-//       element.skills.includes("MongoDB") &&
-//       element.skills.includes("Express") &&
-//       element.skills.includes("React") &&
-//       element.skills.includes("Node")
-//     ) {
-//       myArray.push(Object.keys(users)[index]);
-//       index += 1;
-//     } else {
-//       index += 1;
-//     }
-//   }
-//   return myArray;
-// }
+// 3. Find people who are MERN stack developer from the users object
+function findMern() {
+  let index = 0;
+  let myArray = [];
+  for (const element of Object.values(users)) {
+    if (
+      element.skills.includes("MongoDB") &&
+      element.skills.includes("Express") &&
+      element.skills.includes("React") &&
+      element.skills.includes("Node")
+    ) {
+      myArray.push(Object.keys(users)[index]);
+      index += 1;
+    } else {
+      index += 1;
+    }
+  }
+  return myArray;
+}
 // console.log(findMern());
 
+// 4. Set your name in the users object without modifying the original users object
 users.Adam = {
   email: "adam.rogacewicz@gmail.com",
   skills: ["HTML", "CSS", "JavaScript", "Python", "SQL", "MongoDB"],
@@ -156,14 +170,36 @@ users.Adam = {
   isLoggedIn: true,
   points: 100,
 };
-
 // console.log(users.Adam);
-// console.log(Object.entries(users));
-// for (const element of Object.entries(users)) {
-//   console.log(element[0]);
-// }
-// console.log(Object.values(users));
 
+// 5. Get all keys or properties of users object
+const copyUser = Object.values(users);
+// for (const element of copyUser) {
+//   console.log(element);
+// }
+
+// 6. Get all the values of users object
+// the same as above
+
+// 7. Use the countries object to print a country name, capital, populations and languages.
+var firstFile = require("./countries");
+
+function getInfoCountries() {
+  let myArray = [];
+  for (i = 0; i < 5; i++) {
+    myArray.push({
+      name: firstFile.countries[i].name,
+      capital: firstFile.countries[i].capital,
+      languages: firstFile.countries[i].languages,
+      population: firstFile.countries[i].population,
+    });
+  }
+  return myArray;
+}
+// console.log(getInfoCountries());
+
+/* LEVEL 3 */
+// 1. Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
 const personAccount = {
   id: 1,
   firstName: "Adam",
@@ -189,12 +225,12 @@ const personAccount = {
     return `Account balance: ${this.totalIncome() - this.totalExpense()}`;
   },
 };
-
 // console.log(personAccount.accountBalance());
 // personAccount.addExpense(500);
 // console.log(personAccount.totalExpense());
 // console.log(personAccount.accountBalance());
 
+// 2. Questions: 2, 3 and 4 are based on the following two arrays: users and products
 const users2 = [
   {
     _id: "ab12ex",
@@ -336,6 +372,7 @@ function signIn(email, password) {
   return "You entered wrong email or password";
 }
 
+// 3. The products array has three elements and each of them has six properties. a. Create a function called rateProduct which rates the product b. Create a function called averageRating which calculate the average rating of a product
 function rateProduct(username, rate) {
   if (rate < 0 || rate > 5) {
     return "Rate is incorrect";
@@ -368,6 +405,7 @@ function averageRating(id) {
   return "That product does not exist!";
 }
 
+// 4. Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
 function likeProduct(idProduct, username) {
   for (const element of users2) {
     if (username === element.username) {
@@ -395,7 +433,6 @@ function likeProduct(idProduct, username) {
 // );
 // console.log(signIn("brook@brook.com", "123111"));
 // console.log(Object.values(users2));
-
 // console.log(Object.entries(users2));
 // console.log(rateProduct("Adam", 5));
 // console.log(products[1]);

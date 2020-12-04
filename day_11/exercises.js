@@ -1,3 +1,4 @@
+/* LEVEL 1 */
 const constants = [2.72, 3.14, 9.81, 37, 100];
 const countries = ["Finland", "Estonia", "Sweden", "Denmark", "Norway"];
 const rectangle = {
@@ -51,37 +52,40 @@ const users = [
   },
 ];
 
-// 1
+// 1. Destructure and assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
 let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants;
 // console.log(e, pi, gravity, humanBodyTemp, waterBoilingTemp);
 
-// 2
+// 2. Destructure and assign the elements of countries array to fin, est, sw, den, nor
 let [fin, est, sw, den, nor] = countries;
 // console.log(fin, est, sw, den, nor);
 
-// 3
+// 3. Destructure the rectangle object by its properties or keys.
 let { width, height, area, perimeter } = rectangle;
 // console.log(width, height, area, perimeter);
 
-// 1
+/* LEVEL 2 */
+// 1. Iterate through the users array and get all the keys of the object using destructuring
 for (const { name, scores, skills, age } of users) {
   //   console.log(name, scores, skills, age);
 }
-// 2
+
+// 2. Find the persons who have less than two skills
 for (const { name, scores, skills, age } of users) {
   if (skills.length < 2) {
     // console.log(name, scores, skills, age);
   }
 }
 
-// 1
+/* LEVEL 3*/
+// 1. Destructure the countries object print name, capital, population and languages of all countries
 import { countriesSecond } from "./countries_data.js";
 
 for (const { name, capital, population, languages } of countriesSecond) {
   //   console.log(name, capital, population, languages);
 }
 
-// 2
+// 2. A junior developer structure student name, skills and score in array of arrays which may not easy to read. Destructure the following array name to name, skills array to skills, scores array to scores, JavaScript score to jsScore and React score to reactScore variable in one line.
 const student = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
 let [
   name,
@@ -93,7 +97,7 @@ let [
 ] = student;
 // console.log(name, skillsLength, skills, scores, jsPoints, reactPoints);
 
-// 3
+// 3. Write a function called convertArrayToObject which can convert the array to a structure object.
 const students = [
   ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]],
   ["John", ["HTM", "CSS", "JS", "React"], [85, 80, 85, 80]],
@@ -111,7 +115,7 @@ function convertArrayToObject(array) {
 }
 // console.log(convertArrayToObject(students));
 
-// 4
+// 4. Copy the student object to newStudent without mutating the original object. In the new object add the following
 const student2 = {
   name: "David",
   age: 25,
@@ -131,10 +135,18 @@ const student2 = {
   },
 };
 
-console.log(student2);
 const copiedStudent = { ...student2 };
+
+// 4.1. Add Bootstrap with level 8 to the front end skill sets
 copiedStudent.skills.frontEnd.push({ skill: "Bootstrap", level: 8 });
+
+// 4.2. Add Express with level 9 to the back end skill sets
 copiedStudent.skills.backEnd.push({ skill: "Express", level: 9 });
+
+// 4.3. Add SQL with level 8 to the data base skill sets
 copiedStudent.skills.dataBase.push({ skill: "SQL", level: 8 });
+
+// 4.4. Add SQL without level to the data science skill sets
 copiedStudent.skills.dataScience.push("SQL");
-console.log(copiedStudent);
+
+// console.log(copiedStudent);

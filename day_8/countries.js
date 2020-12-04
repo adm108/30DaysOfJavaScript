@@ -2012,16 +2012,4 @@ const countries = [
   },
 ];
 
-function getInfoCountries() {
-  let myArray = [];
-  for (i = 0; i < 5; i++) {
-    myArray.push({
-      name: countries[i].name,
-      capital: countries[i].capital,
-      languages: countries[i].languages,
-      population: countries[i].population,
-    });
-  }
-  return myArray;
-}
-console.log(getInfoCountries());
+module.exports = { countries };
