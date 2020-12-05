@@ -1,4 +1,5 @@
 # 30DaysOfJavaScript challange !
+<center># 30DaysOfJavaScript challange !</center>
 
 ## Here I put my solved exercises of each day of 30DaysOfJavaScript challenge!
 
