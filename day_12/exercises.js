@@ -1,4 +1,4 @@
-// LEVEL 1
+/* LEVEL 1 */
 // 1. Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.’
 let text =
   "He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.";
@@ -47,7 +47,7 @@ function isValidVariable(variable) {
 // console.log(isValidVariable("1first_name"));
 // console.log(isValidVariable("firstname"));
 
-// LEVEL 2
+/* LEVEL 2*/
 // 1. Write a function called tenMostFrequentWords which get the ten most frequent word from a string.
 function MostFrequentWords(sentence, numberOfWords) {
   let pattern = /[a-z]+/gi;
@@ -70,7 +70,7 @@ function MostFrequentWords(sentence, numberOfWords) {
 //   )
 // );
 
-// LEVEL 3
+/* LEVEL 3 */
 // 1. Write a function which cleans text. Clean the following text. After cleaning, count three most frequent words in the string.
 function cleanText(sentence) {
   let pattern = /@|%|#|&|;|\$/g;

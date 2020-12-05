@@ -1,4 +1,4 @@
-// LEVEL 1
+/* LEVEL 1 */
 // 1. Display the countries array as a table
 const countries = [
   ["Finland", "Helsinki"],
@@ -20,7 +20,7 @@ import { countriesSecond } from "./countries_data.js";
 // console.table(countriesSecond.slice(0, 5));
 // console.groupEnd();
 
-// LEVEL 2
+/* LEVEL 2 */
 // 1. 10 > 2 * 10 use console.assert()
 // console.assert(10 > 2 * 10, "10 is not higher number than 2 * 10");
 
@@ -30,7 +30,7 @@ import { countriesSecond } from "./countries_data.js";
 // 3. Write an error message using console.error()
 // console.warn("error message");
 
-// LEVEL 3
+/* LEVEL 3 */
 // 1. Check the speed difference among the following loops: while, for, for of, forEach
 console.time("while");
 let i = 0;
