@@ -1,5 +1,5 @@
 # 30DaysOfJavaScript challange !
-<div style:"text-align: center;"># 30DaysOfJavaScript challange !</div>
+<div align: "center"># 30DaysOfJavaScript challange !</div>
 
 ## Here I put my solved exercises of each day of 30DaysOfJavaScript challenge!
 
