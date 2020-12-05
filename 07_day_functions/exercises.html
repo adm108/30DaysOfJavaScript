@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 7</title>
+  </head>
+  <body>
+    <!-- LEVEL 3 -->
+    <!-- 1. Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. -->
+    <script>
+      var x;
+      var y;
+      x = prompt("Enter number of random characters:");
+      y = prompt("Enter number of random ids:");
+      function userIdGeneratedByUser() {
+        let myList = [];
+        const characters =
+          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        for (let i = 0; i < y; i++) {
+          let usedId = "";
+          for (let z = 0; z < x; z++) {
+            usedId += characters[Math.floor(Math.random() * characters.length)];
+          }
+          myList.push(usedId);
+        }
+        return myList;
+      }
+      alert(userIdGeneratedByUser());
+    </script>
+  </body>
+</html>
