@@ -6,4 +6,4 @@
 
 <div align="center"><h4>Here I am going to put my solved exercises of each day of 30DaysOfJavaScript challenge! If you want to learn JavaScript I highly recommend you that site:</h4></div>
 
-<div align="center"><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="_blank">30DaysOfJavaScript</a></div>
+<div align="center"><a href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="blank">30DaysOfJavaScript</a></div>
